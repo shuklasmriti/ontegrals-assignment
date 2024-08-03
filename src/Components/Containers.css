@@ -1,0 +1,166 @@
+/* Base styles (mobile-first approach) */
+.container-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 17px; */
+    gap: 20px;
+   
+}
+
+.container1, .container2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+}
+
+.cont1-img, .cont2-img {
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.cont1-img img, .cont2-img img {
+    display: block;
+    width: 100%; /* Make images responsive */
+    max-width: 32rem; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.cont1-detail , .cont2-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 16px; /* Slightly smaller font size for smaller screens */
+
+}
+
+
+
+.detail-heading {
+    font-size: 30px;
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+.detail-para ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+.detail-para{
+
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+}
+
+.detail-para li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    color: seagreen;
+}
+
+.detail-para li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: green;
+    font-size: 22px;
+}
+.methodology{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: brown; */
+    height: 10rem;
+}
+.methodology-button{
+    border: 2px solid #0a0d39;
+    border-radius: 14px;
+    width: 14rem;
+    height: 3.6rem;
+    background-color: #0a0d39;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+}
+.asked-questions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       height: 14rem;
+}
+.question-heading{
+    font-size:2.5rem;
+    font-weight: 700;
+}
+@keyframes triangle-motion {
+    0% {
+        transform: rotate(0deg) translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: rotate(120deg) translate(50px, 0) rotate(-120deg);
+    }
+    66% {
+        transform: rotate(240deg) translate(-50px, 50px) rotate(-240deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(0, -50px) rotate(-360deg);
+    }
+}
+
+.methodology-button {
+    display: inline-block;
+    transition: transform 0.8s ease-in-out;
+}
+
+.methodology:hover {
+    animation: triangle-motion 0.8s ease-in-out;
+}
+
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+    
+    .container1, .container2 {
+        flex-direction: row; /* Arrange items side by side on larger screens */
+        align-items: center; /* Align items to the start of the container */
+    }
+
+    .cont1-detail {
+         /* Adjust font size for larger screens */
+        padding-left: 30px; /* Increase padding for larger screens */
+    }
+
+    
+    .cont1-img img ,.cont2-img img{
+        width: 20rem;
+        height: 18rem;
+    }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 1200px) {
+    .cont1-img, .cont2-img {
+        padding: 20px; /* Increase padding for larger screens */
+    }
+
+    .cont1-detail {
+        /* Adjust font size for very large screens */
+        padding-left: 40px; /* Increase padding for very large screens */
+    }
+
+    
+    .cont1-img img ,.cont2-img img{
+        width: 27rem;
+        height: 20rem;
+    }
+    .container-box{
+        padding: 60px;
+    }
+}

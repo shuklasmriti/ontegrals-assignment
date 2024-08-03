@@ -1,0 +1,83 @@
+/* Card.css */
+.outer-card-body{
+    display: flex;
+   
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Adding a background color for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card:hover {
+    transform: scale(1.004); /* Slightly zooms in on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.card-header {
+    display: flex;
+     /* Space between header elements */
+    align-items: center;
+    padding: 15px; /* Increased padding for better spacing */
+  ; /* Light background color */
+    cursor: pointer;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-body {
+    max-height: 0; /* Start with height 0 */
+    overflow: hidden; /* Hide the overflow content */
+    padding: 0 15px; /* Add padding for content */
+  /* Slightly different background color */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding change */
+
+background-color:transparent;
+}
+
+.card-body.open {
+    max-height: 300px; /* Adjusted to fit more content, or use auto for dynamic height */
+    padding: 15px; /* Increased padding when open */
+    background-color:rgb(164, 201, 180);
+}
+
+.toggle {
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    width: 2.5rem; /* Slightly larger for better click area */
+    height: 2.5rem; /* Matching height */
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/* Background color for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle:hover {
+    background-color: rgb(180, 136, 136); /* Light hover background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.toggle-icon {
+    font-size: 1.5rem; /* Adjusted size for better visibility */
+    color: #333; /* Darker color for icon */
+}
+@media (min-width:768px) and (max-width:1440px) {
+   .outer-card-body{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+    
+}

@@ -1,0 +1,159 @@
+.brok-card {
+    margin: 0.8rem;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(68, 153, 105);
+    flex-direction: column; /* Default to column for better mobile support */
+    width: 19rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for smooth animation */
+}
+
+.brok-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.brok-card-img {
+    width: 100%; /* Full width for mobile */
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Ensure images stay within the card */
+}
+
+.brok-card-img img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 30px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth image animation */
+}
+
+.brok-card:hover .brok-card-img img {
+    transform: rotate(10deg); /* Rotate image on hover */
+}
+
+.brok-card-data {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.brok-card-row1, .brok-card-row2, .brok-card-row3, .brok-card-row4 {
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    height: auto;
+    gap: 10px;
+    align-items: flex-start; /* Default to start for better mobile support */
+    margin-bottom: 10px;
+}
+
+.rattings {
+    font-size: 1.2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.detail-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.full-detail {
+    width: 40%;
+    height: 2.5rem;
+    background-color: #0a0d39;
+    color: white;
+    border: 1px solid #0a0d39;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out; /* Smooth button color transition */
+}
+
+.full-detail:hover {
+    background-color: #0a0d55; /* Change button color on hover */
+}
+
+.discount {
+    border-radius: 3px;
+    width: 100%;
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(6, 63, 31);
+    color: white;
+    font-size: large;
+    text-align: center;
+}
+
+.span-container {
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    gap: 10px;
+    align-items: flex-start;
+}
+
+@media (min-width: 769px) {
+    .brok-card {
+        flex-direction: row; /* Change to row on larger screens */
+        width: 90%;
+    }
+    .brok-card-img {
+        width: 22%;
+    }
+    .brok-card-img img {
+        width: 12rem;
+        height: 12rem;
+        padding: 20px;
+    }
+    .brok-card-row1, .brok-card-row2, .brok-card-row3, .brok-card-row4 {
+        flex-direction: row; /* Change to row on larger screens */
+        height: 5rem;
+        align-items: center;
+    }
+    .detail-button {
+        justify-content: end;
+        width: 54%;
+    }
+    .span-container {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brok-card {
+        width: 90%; /* Ensure the card takes full width on smaller screens */
+    align-items: center;
+justify-content: center;
+}
+    .full-detail{
+        width: 100%;
+    }
+    .brok-card-img img {
+        width: 10rem;
+        height: 10rem;
+        padding: 10px;
+    }
+    .brok-card-row1, .brok-card-row2, .brok-card-row3, .brok-card-row4 {
+        flex-direction: column; /* Keep column layout on smaller screens */
+        align-items: flex-start;
+    }
+    .span-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .detail-button {
+        justify-content: center; /* Center the button on smaller screens */
+        width: 100%;
+    }
+}

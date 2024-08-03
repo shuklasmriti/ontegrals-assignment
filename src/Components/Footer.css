@@ -1,0 +1,100 @@
+.footer-body {
+    display: flex;
+    background-color: seagreen;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.footer-logo {
+    width: 20%;
+}
+
+.footer-logo img {
+    width: 14rem;
+    height: 14rem;
+}
+
+.footer-finology, .footer-select, .footer-help, .follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    gap: 20px;
+}
+
+.footer-finology h2, .footer-select h2, .footer-help h2, .follow h2 {
+    font-size: 1.9rem;
+    color: white;
+}
+
+/* Adjust for smaller screens */
+.footer-ul {
+    list-style-type: none;
+    color: #0a0d39;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .footer-body {
+        gap: 20px;
+    }
+    .footer-logo {
+        width: 25%;
+    }
+    .footer-finology, .footer-select, .footer-help, .follow {
+        width: 25%;
+    }
+    .footer-finology h2, .footer-select h2, .footer-help h2, .follow h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .footer-finology, .footer-select, .footer-help, .follow {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-finology h2, .footer-select h2, .footer-help h2, .follow h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-body {
+        padding: 10px;
+    }
+    .footer-logo {
+        width: 60%;
+    }
+    .footer-finology, .footer-select, .footer-help, .follow {
+        width: 100%;
+        gap: 10px;
+    }
+    .footer-finology h2, .footer-select h2, .footer-help h2, .follow h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-logo img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .footer-finology h2, .footer-select h2, .footer-help h2, .follow h2 {
+        font-size: 1.2rem;
+    }
+}

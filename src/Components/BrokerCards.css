@@ -1,0 +1,107 @@
+/* Base styles */
+.container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.broker-part, .card-part {
+    background-color: #e6faf3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    flex: 1 1 100%; 
+}
+
+.card-part {
+    background-color: #e3e7fb;
+}
+
+.images {
+    width: 14rem;
+    height: 14rem;
+}
+
+.broker-img1, .card-img1 {
+    width: 12rem;
+    height: 12rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.headings {
+    font-size: 1.8rem;
+    padding-left: 40px;
+}
+
+.para {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.featured{
+    width: 13rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 12px;margin-top: 39px;
+    background-color: #0a0d39;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+font-size: larger;
+cursor: pointer;
+}
+
+
+@keyframes circle-rotation {
+    0% {
+        transform: rotate(0deg) translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg) translate(20px, 20px) rotate(-90deg);
+    }
+    50% {
+        transform: rotate(180deg) translate(0, 40px) rotate(-180deg);
+    }
+    75% {
+        transform: rotate(270deg) translate(-20px, 20px) rotate(-270deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(0, 0) rotate(-360deg);
+    }
+}
+
+.featured:hover {
+    animation: circle-rotation 0.8s ease-in-out;
+}
+
+.icon{
+
+        width: 24px;  /* Adjust the size as needed */
+        height: 26px; /* Adjust the size as needed */
+    
+}
+@media (min-width: 768px) {
+    .broker-part, .card-part {
+        flex: 1 1 50%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .broker-part, .card-part {
+        flex: 1 1 50%; 
+        }
+}
